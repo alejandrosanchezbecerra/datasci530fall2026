@@ -33,7 +33,8 @@ panel on the left:
 
 Delete existing table
 -- SQLBook: Code
--- Active: 1710903290079@@127.0.0.1@5432@postgres
+-- Active: 1794502231419@@127.0.0.1@5432@postgres
+-- Active: 1794502231419@@127.0.0.1@5432@postgres290079@@127.0.0.1@5432@postgres
 -- If the table already exists we can drop it:
 -- If it doesn't exist nothing happens
 -- System commands are in upper case and user defined
@@ -46,6 +47,7 @@ DROP TABLE IF EXISTS drivers;
 
 Create empty table from codebook
 -- SQLBook: Code
+-- Active: 1794502231419@@127.0.0.1@5432@postgres
 -- Create empty TABLE called "drivers"
 -- This example has five arguments separated by a comma
 -- that contain the "column_name" and "column_type", respectively
@@ -98,7 +100,9 @@ Try it yourself!
 -- Make sure to deparate arguments by a semicolon!
 
 
+INSERT INTO drivers VALUES (5, 'Oscar Piastri','Australian',403);
 
+INSERT INTO drivers VALUES (6, 'Lando Noriss','British',103);
 
 
 -- SQLBook: Markup
@@ -188,7 +192,8 @@ with more than 60 victories
 -- SQLBook: Code
 -- Write your own code!
 
-
+SELECT driver_id, nationality FROM drivers
+WHERE (victories > 60); 
 
 -- SQLBook: Markup
 # <span style="color:darkblue"> III. Groupby + Chaining </span>
